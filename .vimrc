@@ -14,10 +14,15 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'ervandew/supertab'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'pangloss/vim-javascript'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'dense-analysis/ale'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'frazrepo/vim-rainbow'
+Plugin 'mattn/emmet-vim'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 
@@ -42,6 +47,8 @@ set cursorline
 set colorcolumn=80
 set clipboard=unnamed
 
+let g:rainbow_active = 1
+let g:better_whitespace_enabled=1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 nnoremap <Leader>r :source $MYVIMRC<CR>
@@ -50,3 +57,4 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gc :Gcommit<CR>
 nnoremap <Leader>gp :Gpush<CR>
 nnoremap <Leader>gf :Gpull<CR>
+nnoremap <Leader>ig :IndentGuidesToggle<CR>
